@@ -14,3 +14,7 @@ class UsuarioBean:
 
     def update(self, usuario):
         self.usuarioDAO.update(usuario)
+
+    def login(self, email, senha):
+        return self.usuarioDAO.login(email, senha)
+

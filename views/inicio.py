@@ -1,5 +1,6 @@
 from controller.UsuarioBean import UsuarioBean
 from models.entities.Usuario import Usuario
+from views.input_usuario import login
 
 
 def main():
@@ -14,4 +15,30 @@ def main():
 
     usuario_bean.update(usuario)
 
-main()
+def inicio():
+    print("=====Controle de Horários=====")
+    print()
+    print("===== 1 - Login =====")
+    print("===== 2 - Cadastro =====")
+    print("===== 0 - Sair =====")
+
+    escolha = int(input("Digite uma opção: "))
+
+    if escolha == 0:
+        pass
+    elif escolha == 1:
+        login()
+    elif escolha == 2:
+        pass
+    else:
+        escolha = input("Opção inválida digite uma nova opção: ")
+
+def cadastro():
+    print("=====Controle de Horários=====")
+    print("=====      CADASTROS     =====")
+    print("==============================")
+    print("=====   1 - Confirmar    =====")
+    print("=====     2 - Voltar     =====")
+    print("=====    3 - Corrigir    =====")
+
+inicio()

@@ -12,7 +12,7 @@ class UsuarioDAO(Conexao):
         print(query)
         Conexao.desconecta(self)
 
-    def busca(self, usuario):
+    def find(self, usuario):
         cursor = Conexao.conecta(self)
 
         query = f"SELECT * FROM usuario"
@@ -26,5 +26,23 @@ class UsuarioDAO(Conexao):
         cursor.execute(query)
         print(query)
         Conexao.desconecta(self)
+
+    def login(self, email, senha):
+        cursor = Conexao.conecta(self)
+        resultado = False
+
+        query = f"SELECT email, senha FROM usuario WHERE email = '{email}'  AND senha = '{senha}'"
+        try:
+            cursor.execute(query)
+            resultado = cursor.fetchall()
+            print(resultado)
+        except:
+            print("falha")
+        Conexao.desconecta(self)
+
+        if resultado:
+            return True
+        else:
+            return False
 
 
