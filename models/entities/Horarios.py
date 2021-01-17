@@ -5,6 +5,8 @@ class Horarios:
     _hora_saida = None
     _hora_inicio_extra = None
     _hora_saida_extra = None
+    _data = None
+    _id_usuario = None
 
     def __init__(self):
         self._hora_entrada
@@ -13,6 +15,8 @@ class Horarios:
         self._hora_saida
         self._hora_inicio_extra
         self._hora_saida_extra
+        self._data
+        self._id_usuario
 
     def get_hora_entrada(self):
         return self._hora_entrada
@@ -49,3 +53,15 @@ class Horarios:
 
     def set_hora_saida_extra(self, horario):
         self._hora_saida_extra = horario
+
+    def get_data(self):
+        return self._data
+
+    def set_data(self, data):
+        self._data = data
+
+    def get_id_usuario(self):
+        return self._id_usuario
+
+    def set_id_usuario(self, id_usuario):
+        self._id_usuario = id_usuario

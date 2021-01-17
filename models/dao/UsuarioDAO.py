@@ -31,7 +31,7 @@ class UsuarioDAO(Conexao):
         cursor = Conexao.conecta(self)
         resultado = False
 
-        query = f"SELECT email, senha FROM usuario WHERE email = '{email}'  AND senha = '{senha}'"
+        query = f"SELECT idusuario FROM usuario WHERE email = '{email}'  AND senha = '{senha}'"
         try:
             cursor.execute(query)
             resultado = cursor.fetchall()
@@ -40,9 +40,6 @@ class UsuarioDAO(Conexao):
             print("falha")
         Conexao.desconecta(self)
 
-        if resultado:
-            return True
-        else:
-            return False
+        return resultado
 
 

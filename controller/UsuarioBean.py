@@ -16,5 +16,11 @@ class UsuarioBean:
         self.usuarioDAO.update(usuario)
 
     def login(self, email, senha):
-        return self.usuarioDAO.login(email, senha)
+        id_usuario = self.usuarioDAO.login(email, senha)
+
+        id_usuario = id_usuario[0]
+        #print(f'{teste[0]} teste')
+
+
+        return id_usuario[0]
 

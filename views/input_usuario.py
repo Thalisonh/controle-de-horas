@@ -1,6 +1,6 @@
 from controller.UsuarioBean import UsuarioBean
 from models.entities.Usuario import Usuario
-from views.inserir_horas import inserir_horas
+from views.menu_escolha_horarios import menu_escolha_horarios
 
 
 def login():
@@ -12,7 +12,7 @@ def login():
     login = usuario_bean.login(email, senha)
 
     if login:
-        inserir_horas()
+        menu_escolha_horarios(login)
     else:
         print("Usuário não encontrado, digite novamente.")
         email = input("Digite seu email: ")

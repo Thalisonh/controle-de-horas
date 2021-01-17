@@ -7,12 +7,16 @@ class HorariosBean:
     def __init__(self):
         self.horarios_dao
 
-    def insert(self, periodo, horario):
-        pass
+    def insert(self, horario):
+        self.horarios_dao.insert(horario)
 
     def update(self, horario):
         pass
 
     def remove(self, horario):
         pass
+
+    def prepare_to_insert(self, horarios):
+        pass
+
 
