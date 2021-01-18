@@ -7,7 +7,7 @@ class UsuarioDAO(Conexao):
     def insert(self, usuario):
         data_atual = datetime.now()
         cursor = Conexao.conecta(self)
-        query = f"INSERT INTO usuario(idusuario, nome, email, data_nascimento, senha, data_criacao) VALUES (0, '{usuario.get_nome()}', '{usuario.get_email()}', '{usuario.get_data_nascimento()}', '{usuario.get_senha()}', '{data_atual}') "
+        query = f"INSERT INTO usuario(idusuario, nome, email, cpf, data_nascimento, senha, ativo, data_criacao) VALUES (0, '{usuario.get_nome()}', '{usuario.get_email()}', '{usuario.get_cpf()}', '{usuario.get_data_nascimento()}', '{usuario.get_senha()}', 1, '{data_atual}') "
         cursor.execute(query)
         print(query)
         Conexao.desconecta(self)
