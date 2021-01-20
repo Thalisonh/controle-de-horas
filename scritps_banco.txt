@@ -1,0 +1,40 @@
+CREATE SCHEMA `banco_de_hora_python` ;
+
+
+CREATE TABLE `banco_de_hora_python`.`usuarios` (
+  `idusuarios` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
+  `data_nascimento` DATE NOT NULL,
+  `senha` VARCHAR(50) NOT NULL,
+  `ativo` TINYINT NOT NULL,
+  `data_criacao` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idusuarios`, `email`, `cpf`));
+
+
+  CREATE TABLE `banco_de_hora_python`.`horarios` (
+  `idhorarios` INT NOT NULL AUTO_INCREMENT,
+  `idusuario` INT NOT NULL,
+  `data` DATE NOT NULL,
+  `hora_entrada` TIME NOT NULL,
+  `hora_saida_ao_intervalo` TIME NOT NULL,
+  `hora_volta_ao_intervalo` TIME NOT NULL,
+  `hora_volta_do_invervalo` TIME NOT NULL,
+  `hora_saida` TIME NOT NULL,
+  `hora_inicio_extra` TIME NOT NULL,
+  `hora_saida_extra` TIME NOT NULL,
+  PRIMARY KEY (`idhorarios`));
+
+
+CREATE TABLE `banco_de_hora_python`.`horario_base` (
+  `idhorario_base` INT NOT NULL AUTO_INCREMENT,
+  `idusuario` INT NOT NULL,
+  `hora_entrada` TIME NOT NULL,
+  `hora_saida_ao_intervalo` TIME NOT NULL,
+  `hora_volta_ao_intervalo` TIME NOT NULL,
+  `hora_saida` TIME NOT NULL,
+  `hora_inicio_extra` TIME NOT NULL,
+  `hora_saida_extra` TIME NOT NULL,
+  `ativo` TINYINT NOT NULL,
+  PRIMARY KEY (`idhorario_base`, `idusuario`));

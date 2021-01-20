@@ -4,7 +4,7 @@ import mysql.connector
 class Conexao:
     def __init__(self):
         self._conexao = mysql.connector.connect(
-            user='root',
+            user='admin',
             password='password',
             host='localhost',
             database='banco_de_hora_python',
