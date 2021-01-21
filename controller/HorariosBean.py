@@ -10,6 +10,9 @@ class HorariosBean:
     def insert(self, horario):
         self.horarios_dao.insert(horario)
 
+    def insert_base(self, horario):
+        self.horarios_dao.insert_base(horario)
+
     def update(self, horario):
         pass
 

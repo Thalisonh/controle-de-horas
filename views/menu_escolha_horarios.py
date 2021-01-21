@@ -1,6 +1,6 @@
 from controller.HorariosBean import HorariosBean
 from controller.UsuarioBean import UsuarioBean
-from views.digitar_horarios import digitar_horarios
+from views.digitar_horarios import digitar_horarios, digitar_horarios_base
 
 
 def menu_escolha_horarios(id):
@@ -17,7 +17,7 @@ def menu_escolha_horarios(id):
         if escolha == 1:
             digitar_horarios(id)
         elif escolha == 2:
-            pass
+            digitar_horarios_base(id)
         elif escolha == 0:
             pass
         else:

@@ -20,7 +20,6 @@ CREATE TABLE `banco_de_hora_python`.`usuarios` (
   `hora_entrada` TIME NOT NULL,
   `hora_saida_ao_intervalo` TIME NOT NULL,
   `hora_volta_ao_intervalo` TIME NOT NULL,
-  `hora_volta_do_invervalo` TIME NOT NULL,
   `hora_saida` TIME NOT NULL,
   `hora_inicio_extra` TIME NOT NULL,
   `hora_saida_extra` TIME NOT NULL,
