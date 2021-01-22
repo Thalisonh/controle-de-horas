@@ -16,10 +16,14 @@ def menu_escolha_horarios(id):
     while escolha:
         if escolha == 1:
             digitar_horarios(id)
+            menu_escolha_horarios(id)
+            escolha = int(input("Digite a sua opção: "))
         elif escolha == 2:
             digitar_horarios_base(id)
+            menu_escolha_horarios(id)
+            escolha = int(input("Digite a sua opção: "))
         elif escolha == 0:
-            pass
+            break
         else:
             print("Opção inválida, escolha uma opção válida.")
             escolha = int(input("Digite a sua opção: "))

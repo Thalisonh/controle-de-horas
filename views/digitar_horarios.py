@@ -43,3 +43,5 @@ def digitar_horarios_base(id):
     horario.set_hora_inicio_extra(hora_extra)
     horario.set_hora_saida_extra(saida_hora_extra)
     horario.set_id_usuario(id)
+
+    horarios.insert_base(horario)
